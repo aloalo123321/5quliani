@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="topbar">
+      <nav>
+        <ul>
+          <div class="bar-right">
+            <li>
+              <img
+                class="bar-img rockstar-img"
+                src="img/Logo (1).png"
+                alt="logo"
+              />
+            </li>
+            <li>
+              <label for="GTA"></label>
+              <select id="GTA">
+                <option value="volvo">jogos</option>
+                <option value="saab">GTA V</option>
+                <option value="opel">GTA IV</option>
+                <option value="audi">GTA III</option>
+              </select>
+            </li>
+            <li>Loja</li>
+            <li>ajuda</li>
+          </div>
+          <div class="bar-left">
+            <li><button class="yellow-button">Baixe o Launcher</button></li>
+            <li>
+              <img
+                class="bar-img transform"
+                src="img/search.png"
+                alt="search"
+              />
+            </li>
+            <li>
+              <img class="bar-img transform" src="img/acc.png" alt="acc" />
+            </li>
+          </div>
+        </ul>
+      </nav>
+    </div>
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <img src="img/img.png" style="width: 100%; height: 400px" />
+      </div>
+
+      <div class="mySlides fade">
+        <img src="img/rockstar2.jpg" style="width: 100%; height: 400px" />
+      </div>
+
+      <div class="mySlides fade">
+        <img
+          src="img/rockstarwallpaper.jpg"
+          style="width: 100%; height: 400px"
+        />
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+    </div>
+    <br />
+
+    <div
+      style="
+        text-align: center;
+        position: absolute;
+        left: 670px;
+        top: 450px;
+        background-color: black;
+      "
+    >
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    <script>
+      let slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
+
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
+    </script>
+    <div>
+      <nav class="second-page-list">
+        <ul>
+          <div>
+            <li class="second-page-bar">Jogos em Destaque</li>
+          </div>
+          <div class="button-flex-div">
+            <li><button class="pc-div">Pc</button></li>
+            <li><button class="Console-div">Console</button></li>
+            <li>
+              <button class="Dispositivos-div">Dispositivos Portáteis</button>
+            </li>
+          </div>
+        </ul>
+      </nav>
+    </div>
+    <div class="Rockstar-img-colage">
+      <img class="transform" src="img/GTA 5.png" alt="" />
+      <img class="transform" src="img/GTA online.png" alt="" />
+      <img class="transform" src="img/RED.png" alt="" />
+      <img class="transform" src="img/RED Online.png" alt="" />
+    </div>
+    <div class="download-button">
+      <button class="yellow-button button-size">Ver todos os jogos</button>
+    </div>
+    <div class="main">
+      <div class="for-flex">
+        <div class="second-main">
+          <p class="second-clip-text">Últimas Notícias</p>
+          <div class="gta6">
+            <img class="gta6-img" src="img/GTA 6.png" alt="GTA6" />
+            <div class="disqription-background">
+              <div class="for-center">
+                <p class="disqription">
+                  Grand Theft Auto VI - Veja o 1º trailer agora
+                </p>
+                <p class="date">Rockstar Games 5 de dezembro de 2023</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="for-column">
+          <div class="third-img">
+            <img class="gta-img" src="img/Rectangle 25.png" alt="GTA6" />
+            <div class="mini-info">
+              <div class="for-center">
+                <p class="mini-disqription">
+                  Grand Theft Auto VI - Veja o 1º trailer agora
+                </p>
+                <p class="mini-date">
+                  1º Trailer. Terça-feira, 5 de Dezembro. 9h Et.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="four-img">
+            <img class="gta-img" src="img/Rectangle 24.png" alt="GTA6" />
+            <div class="mini-info">
+              <div class="for-center margin-img">
+                <p class="mini-disqription">
+                  Nova atualização de GTA Online chegando em dezembro
+                </p>
+                <p class="mini-date">Rockstar Games 5 de dezembro de 2023</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="last-container">
+      <div class="right">
+        <div class="photo">
+          <img class="rockstar-logo" src="img/Logo (2).png" alt="logo" />
+          <p class="game-launcher-style">Games Launcher</p>
+        </div>
+        <div>
+          <p class="last-p">Todos os seus jogos em um só lugar.</p>
+        </div>
+        <div>
+          <button class="yellow-button YB-more">
+            <p class="text-style">Download</p>
+          </button>
+        </div>
+      </div>
+
+      <img class="last-img" src="img/Games Launcher.png" alt="Launcher" />
+    </div>
+
+    <footer>
+      <div class="footer-left">
+        <img class="footer-left-img" src="img/Logo (3).png" alt="" />
+        <p class="footer-p for-margin">CONTATO</p>
+        <p class="footer-p">SOBRE</p>
+        <p class="footer-p">SUPORTE</p>
+        <p class="footer-p">EMPREGOS</p>
+      </div>
+      <div class="footer-p-second">
+        <p>©2023 Rockstar Games, Inc. - YWR Studio.</p>
+      </div>
+      <div class="footer-right">
+        <img class="footer-img" src="img/Group 10.png" alt="" />
+      </div>
+    </footer>
+  </body>
+</html>
